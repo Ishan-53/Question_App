@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Web Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="question-container">
+        <div class="question-card" id="question1">
+            <div class="question-text">
+                <p>Which of these problems has affected you the most?</p>
+            </div>
+            <div class="answer-palette">
+                <button onclick="selectAnswer(1, this)">Knowledge gap in understanding the basic trading terms</button>
+                <button onclick="selectAnswer(1, this)">Too much noise in the market distracts you from the correct information</button>
+                <button onclick="selectAnswer(1, this)">Trading seems too complex and no clear trusted learning path to get started</button>
+                <button onclick="selectAnswer(1, this)">Suffering too much losses in the market</button>
+                <button onclick="selectAnswer(1, this)">Making rash decisions or quit the stock market due to lack of time</button>
+                <button onclick="selectAnswer(1, this)">Don't know why you are making or losing money</button>
+                <button class="submit-btn" onclick="submitAnswer(1)">Submit</button>
+            </div>
+        </div>
+        <div class="question-card" id="question2" style="display: none;">
+            <div class="question-text">
+                <p>How frequently do you trade?</p>
+            </div>
+            <div class="answer-palette">
+                <button onclick="selectAnswer(2, this)">Daily</button>
+                <button onclick="selectAnswer(2, this)">Weekly</button>
+                <button onclick="selectAnswer(2, this)">Monthly</button>
+                <button onclick="selectAnswer(2, this)">Rarely</button>
+                <button class="submit-btn" onclick="submitAnswer(2)">Submit</button>
+            </div>
+        </div>
+        <div class="question-card" id="question3" style="display: none;">
+            <div class="question-text">
+                <p>What type of trader are you?</p>
+            </div>
+            <div class="answer-palette">
+                <button onclick="selectAnswer(3, this)">Day Trader</button>
+                <button onclick="selectAnswer(3, this)">Swing Trader</button>
+                <button onclick="selectAnswer(3, this)">Position Trader</button>
+                <button onclick="selectAnswer(3, this)">Scalper</button>
+                <button class="submit-btn" onclick="submitAnswer(3)">Submit</button>
+            </div>
+        </div>
+    </div>
+    <div id="title-screen" style="display: none;">
+        <h1>Welcome to CapX!</h1>
+        <p>Thank you for answering the questions.</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

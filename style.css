@@ -1,0 +1,121 @@
+body {
+    background-color: #121212;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#question-container, #title-screen {
+    text-align: center;
+    width: 90%;
+    max-width: 800px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.question-card {
+    display: flex;
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.question-text {
+    flex: 1;
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+    padding-right: 20px;
+}
+
+.answer-palette {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.question-card button {
+    margin: 10px 0;
+    padding: 15px;
+    background-color: #333333;
+    border: 2px solid #ff9800;
+    border-radius: 10px;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1.2em;
+}
+
+.question-card button:hover {
+    background-color: #555555;
+}
+
+.question-card button.selected {
+    background-color: #ff9800;
+    color: #000000;
+}
+
+.submit-btn {
+    background-color: #ff9800;
+    color: #000000;
+    font-weight: bold;
+    margin-top: 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.5em;
+    padding: 15px;
+}
+
+.submit-btn:hover {
+    background-color: #ffa726;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    #question-container {
+        flex-direction: column;
+    }
+
+    .question-text, .answer-palette {
+        width: 100%;
+    }
+
+    .question-text {
+        font-size: 1.5em;
+    }
+
+    .question-card button {
+        padding: 12px;
+        font-size: 1em;
+    }
+
+    .submit-btn {
+        font-size: 1.2em;
+        padding: 12px;
+    }
+}
+
+@media (max-width: 400px) {
+    .question-text {
+        font-size: 1.2em;
+    }
+
+    .question-card button {
+        padding: 10px;
+        font-size: 0.9em;
+    }
+
+    .submit-btn {
+        font-size: 1em;
+        padding: 10px;
+    }
+}
