@@ -1,121 +1,131 @@
+/* General body styles */
 body {
-    background-color: #121212;
-    color: #ffffff;
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
+    background-color: #121212; /* Dark background color for the page */
+    color: #ffffff; /* White text color */
+    font-family: Arial, sans-serif; /* Font style for the page */
+    display: flex; /* Flexbox for centering content */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    height: 100vh; /* Full viewport height */
+    margin: 0; /* Remove default margin */
 }
 
+/* Styles for containers holding questions and title screen */
 #question-container, #title-screen {
-    text-align: center;
-    width: 90%;
-    max-width: 800px;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    text-align: center; /* Center text within these containers */
+    width: 90%; /* Container width relative to viewport width */
+    max-width: 800px; /* Maximum width of container */
+    margin: auto; /* Center container horizontally */
+    display: flex; /* Flexbox for layout */
+    flex-direction: column; /* Stack child elements vertically */
+    justify-content: center; /* Center content vertically */
 }
 
+/* Styles for each question card */
 .question-card {
-    display: flex;
-    background-color: #1e1e1e;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: flex; /* Flexbox for layout */
+    background-color: #1e1e1e; /* Dark background for cards */
+    padding: 20px; /* Padding inside cards */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Shadow for depth effect */
 }
 
+/* Styles for question text */
 .question-text {
-    flex: 1;
-    font-size: 2em;
-    display: flex;
-    align-items: center;
-    padding-right: 20px;
+    flex: 1; /* Allow to grow and fill available space */
+    font-size: 2em; /* Large font size for question text */
+    display: flex; /* Flexbox for alignment */
+    align-items: center; /* Center text vertically */
+    padding-right: 20px; /* Space between text and buttons */
 }
 
+/* Styles for answer buttons */
 .answer-palette {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: stretch;
+    flex: 1; /* Allow to grow and fill available space */
+    display: flex; /* Flexbox for layout */
+    flex-direction: column; /* Stack buttons vertically */
+    justify-content: center; /* Center buttons vertically */
+    align-items: stretch; /* Stretch buttons to full width */
 }
 
+/* General button styles for question cards */
 .question-card button {
-    margin: 10px 0;
-    padding: 15px;
-    background-color: #333333;
-    border: 2px solid #ff9800;
-    border-radius: 10px;
-    color: #ffffff;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    font-size: 1.2em;
+    margin: 10px 0; /* Margin around buttons */
+    padding: 15px; /* Padding inside buttons */
+    background-color: #333333; /* Dark background for buttons */
+    border: 2px solid #ff9800; /* Orange border for buttons */
+    border-radius: 10px; /* Rounded corners */
+    color: #ffffff; /* White text color */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+    font-size: 1.2em; /* Larger font size for buttons */
 }
 
+/* Button hover effect */
 .question-card button:hover {
-    background-color: #555555;
+    background-color: #555555; /* Lighter background on hover */
 }
 
+/* Styles for selected answer buttons */
 .question-card button.selected {
-    background-color: #ff9800;
-    color: #000000;
+    background-color: #ff9800; /* Orange background for selected button */
+    color: #000000; /* Black text color for selected button */
 }
 
+/* Styles for the submit button */
 .submit-btn {
-    background-color: #ff9800;
-    color: #000000;
-    font-weight: bold;
-    margin-top: 20px;
-    border: none;
-    border-radius: 10px;
-    font-size: 1.5em;
-    padding: 15px;
+    background-color: #ff9800; /* Orange background for submit button */
+    color: #000000; /* Black text color */
+    font-weight: bold; /* Bold text */
+    margin-top: 20px; /* Space above submit button */
+    border: none; /* Remove border */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 1.5em; /* Larger font size */
+    padding: 15px; /* Padding inside button */
 }
 
+/* Submit button hover effect */
 .submit-btn:hover {
-    background-color: #ffa726;
+    background-color: #ffa726; /* Lighter orange background on hover */
 }
 
-/* Responsive adjustments */
+/* Responsive adjustments for smaller screens */
 @media (max-width: 600px) {
     #question-container {
-        flex-direction: column;
+        flex-direction: column; /* Stack questions vertically on small screens */
     }
 
     .question-text, .answer-palette {
-        width: 100%;
+        width: 100%; /* Full width for question text and answer palette */
     }
 
     .question-text {
-        font-size: 1.5em;
+        font-size: 1.5em; /* Smaller font size on small screens */
     }
 
     .question-card button {
-        padding: 12px;
-        font-size: 1em;
+        padding: 12px; /* Smaller padding for buttons */
+        font-size: 1em; /* Smaller font size for buttons */
     }
 
     .submit-btn {
-        font-size: 1.2em;
-        padding: 12px;
+        font-size: 1.2em; /* Slightly smaller font size for submit button */
+        padding: 12px; /* Smaller padding for submit button */
     }
 }
 
 @media (max-width: 400px) {
     .question-text {
-        font-size: 1.2em;
+        font-size: 1.2em; /* Even smaller font size on very small screens */
     }
 
     .question-card button {
-        padding: 10px;
-        font-size: 0.9em;
+        padding: 10px; /* Smaller padding for buttons */
+        font-size: 0.9em; /* Smaller font size for buttons */
     }
 
     .submit-btn {
-        font-size: 1em;
-        padding: 10px;
+        font-size: 1em; /* Smaller font size for submit button */
+        padding: 10px; /* Smaller padding for submit button */
     }
 }
